@@ -1,12 +1,16 @@
 package com.example.demo.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.*; 
 @Entity
+@Table(name = "USERS")
 public class User {
 	@Id
 	private int id;
 	private String name;
 	
+	public String toString() {
+		return name+" : "+ id;
+	}
 	
 	public int getId() {
 		return id;
